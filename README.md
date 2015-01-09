@@ -6,6 +6,16 @@ Using it is simple, but you may need to refer to the available format string opt
 var myDate = new Date();
 alert(myDate.format('M jS, Y'));
 alert(myDate.format('M jS, Y \\i\\s \\h\\e\\r\\e!'));
+
+
+// similar mysql addtime function
+// You have two way to use it, either use Date instance method or Date class method
+var d = new Date();
+alert(d.addTime('1 1:1:1.1')); // add 1 day 1 hour 1 min 1.1 second, just change date d
+
+Date.addTime('1:1:1', '2:2:2'); // output '3:3:3'
+Date.addTime('1:1:1', '2:2');   // output '3:3:1'
+Date.addTime('2000-1-1 1:1:1', '2:2:2'); // output '2000-1-1 3:3:3'
 ```
 
 Will output "Dec 16th, 2013" and "Dec 16th, 2013 is here!". Here are the format options that may be used (taken from php.net and modified a bit):
